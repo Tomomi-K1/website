@@ -21,7 +21,7 @@ We require all Code Contributors to
 2. Read the [onboarding section of our WIKI](https://github.com/hackforla/website/wiki/Joining-the-HackforLA.org-Website-Team).
 3. Read our [CONTRIBUTING](https://github.com/hackforla/website/blob/gh-pages/CONTRIBUTING.md) document and follow the steps.
 
-## We Love Our Stars ⭐⭐⭐
+## We Love Our Stars ⭐⭐
 
 Thanks to the following people who have given us a star on our repo:
 [![Stargazers repo roster for @hackforla/website](https://reporoster.com/stars/hackforla/website)](https://github.com/hackforla/website/stargazers)
