@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function retrieveFilterCategories() {
     {% assign projects = site.guide-pages | where: "display", "true" %}
     let projects = JSON.parse(decodeURIComponent("{{ projects | jsonify | uri_escape }}"))
+    {% assign resources = site.data.internal.toolkitresources | where: "display", true %}
+    const resources = JSON.parse(decodeURIComponent("{{ resources | jsonify | uri_escape }}"))
 
     const practiceAreas = []
     const projectStatus = []
@@ -108,6 +110,23 @@ function retrieveFilterCategories() {
             }
         }
     }
+
+    resources.forEach(resource => {
+    const practiceArea = resource["practice-area"]
+
+    if (practiceArea && !practiceAreas.includes(practiceArea)) {
+        practiceAreas.push(practiceArea)
+    }
+
+    if (resource["tools"]) {
+        resource["tools"].forEach(tool => {
+            if (tool && !projectTools.includes(tool)) {
+                projectTools.push(tool)
+            }
+        })
+    }
+})
+
     return {projectStatus, practiceAreas, projectTools, projectResourceType, projectTechnologies, projectSource, projectContributors}
 }
 
