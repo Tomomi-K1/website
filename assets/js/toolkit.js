@@ -211,11 +211,11 @@ function initializeFilters() {
 function applyFilters(filtersParams) {
     // Show all cards if there are no active filters
     if (Object.values(filtersParams).every(x => x.length === 0)) {
-        document.querySelectorAll(".guide-card").forEach(card => {
+        document.querySelectorAll(".guide-card, .toolkit-resource-card").forEach(card => {
             card.style.display = 'block'
         })
     } else {
-        document.querySelectorAll(".guide-card").forEach(card => {
+        document.querySelectorAll(".guide-card, .toolkit-resource-card").forEach(card => {
             card.style.display = 'block'
             for (let key in filtersParams) {
                 let filterList
